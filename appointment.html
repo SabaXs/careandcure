@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appointment Form</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                font-family: 'Nunito', sans-serif;
+            }
+            div {
+                background: linear-gradient( #eeb67769 0%, #ffc2667a 50%), url(13.jpeg);
+                background-position: center;
+                background-size: cover;
+                border-radius: 10px;
+                padding:24px;
+                max-height: 100%;
+                max-width: 100%;
+
+            }
+            h2 {
+                font-weight: 600;
+                text-align: center;
+                font-size: 30px;
+                padding: 30px;                
+            }
+            label{
+                display: inline-block;
+                width: 150px;
+                margin-left: 20px;
+                margin-top: 30px;
+                max-height: 100%;
+                max-width: 100%;
+            }
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 100%;
+        }
+        
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=date]{
+            width: 30%;
+            padding: 15px;
+            margin: 10px 20px 20px 10px;
+            border-radius: 5px;
+            box-shadow: outset 3px px 3px #232323;
+            background: #E6E6FA;
+        }
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus{
+            background-color: #FFF0F5;
+            outline: none;
+        }
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #f44336;
+            color: #000;
+            align-items: center;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 30%;
+            margin-top: 10px;
+            margin-left: 35%;
+            margin-bottom:10px;
+            opacity: 0.8;
+        }
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: #FFF0F5;
+        }
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+            opacity: 2;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="pop-up" id="Appointment form">
+            <form action="loginf.php" class="form-container">
+                <h2>Patients Personal Details</h2>
+                <label for="Name"><b>Name:</b></label>
+                <input type="text" placeholder="Enter Name" name="name" required><br>
+                <label for="email"><b>Email-ID: </b></label>
+                <input type="text" placeholder="Enter Email-Id" name="email" required>
+                <label for="Phone Number"><b>Phone Number: </b></label>
+                <input type="text" placeholder="Enter Phone number" name="Phonenumber" required><br>
+                <label for="Date"><b>Appointment Date: </b></label>
+                <input type="date" placeholder="Set the date" name="Appointment date" required><br>
+                <label for="Symptoms"><b>Symptoms: </b></label>
+                <input type="text"placeholder="Enter experiencing symptoms" name="Symptoms" required><br>
+                <button type="submit" class="btn"><b>Book Appointment</b></button>
+                <button type="button" class="btn cancel" onclick="location.href='Index.html'"><b>Back to Home Page</b></button>
+            </form>
+        </div>        
+    </body>
+</html>

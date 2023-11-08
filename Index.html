@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scal=1.0">
+        <title> Care&Cure</title>
+        <link rel="icon" type="image/x-icon" href="lg.png">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href ="https://fonts.googleapis.com">
+</head>
+    <body>
+
+        <section class="header">
+<nav> 
+    <a href="Index.html"> </a>
+    
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <div class="navbar">
+            <a href="Index.html"><b><b>HOME</b></b></a>
+            <div class="dropdown">
+              <button class="dropbtn"><b>COVID UPDATES</b>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="https://www.worldometers.info/coronavirus/">WORLDWIDE</a>
+                <a href="https://www.worldometers.info/coronavirus/country/india/">INDIA</a>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><b>ARTICLES</b>
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.msn.com/en-us/news/other/omicron-covid-variant-poses-greater-risk-for-the-unvaccinated-former-white-house-advisor-says/ar-AARvmY3">White House on Omicorn</a>
+                  <a href="https://www.rediff.com/news/report/active-covid-19-cases-in-india-lowest-in-552-days/20211206.html">COVID-19 in India</a>
+                  <a href="https://medicalxpress.com/news/2021-11-patterns-response-health-advice-covid-.html">Health during COVID</a>
+                  <a href="https://whnt.com/news/coronavirus/health-officials-give-advice-about-holiday-travel-and-the-omicron-variant/">Precautions for the Vaccinated</a>
+                  <a href="https://www.msn.com/en-gb/news/world/next-pandemic-could-be-more-lethal-than-covid-oxford-vaccine-creator-says/ar-AARvD1M?pfr=1">The Next Pandemic</a>
+                  <a href="https://www.ibtimes.com/covid-19-update-who-precautions-fully-vaccinated-need-take-3344751">Travel Amid Omicron</a>
+                </div>
+              </div>
+              <a href="appointment.html"><b>APPOINTMENTS</b></a>
+          </div>
+    
+    <i class="fa fa-bars" onclick="showMenu()"> </i>
+</nav>
+        </section>
+        <!--img-slider-->
+        <div class="img-slider">
+          <div class="slide active">
+            <img src="10.jpeg" alt="">
+          </div>
+          <div class="slide">
+            <img src="3.jpeg" alt="">
+          </div>
+          <div class="slide">
+            <img src="7.jpeg" alt="">
+          </div>
+          <div class="slide">
+            <img src="4.jpeg" alt="">
+          </div>
+          <div class="slide">
+            <img src="8.jpeg" alt="">
+          </div>
+          <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+          </div>
+        </div>      
+        <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;      
+        // Javascript for image slider manual navigation
+        var manualNav = function(manual){
+          slides.forEach((slide) => {
+            slide.classList.remove('active');
+    
+            btns.forEach((btn) => {
+              btn.classList.remove('active');
+            });
+          });
+    
+          slides[manual].classList.add('active');
+          btns[manual].classList.add('active');
+        }
+    
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });
+    
+        // Javascript for image slider autoplay navigation
+        var repeat = function(activeClass){
+          let active = document.getElementsByClassName('active');
+          let i = 1;
+    
+          var repeater = () => {
+            setTimeout(function(){
+              [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+              });
+    
+            slides[i].classList.add('active');
+            btns[i].classList.add('active');
+            i++;
+    
+            if(slides.length == i){
+              i = 0;
+            }
+            if(i >= slides.length){
+              return;
+            }
+            repeater();
+          }, 10000);
+          }
+          repeater();
+        }
+        repeat();
+        </script>
+<!--slider end-->
+
+        <section class="youtube">
+            <h3> Care & Cure</h3><br>
+            <iframe width="750" height="450" src="https://www.youtube.com/embed/akXFL0X0tW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+<!---course-->
+<section class="course">
+    <h2>COVID UPDATES</h2>
+    <br><br>
+    <div class="row"> 
+          <div class="link-boxes1">
+            <a href="https://www.worldometers.info/coronavirus/" class="boxx1" style="background-image:url('14.jpeg')" target="_blank">
+              <div class="box-label"></div>
+            </a>
+              <a href="https://www.worldometers.info/coronavirus/country/india/" class="boxx2" style="background-image:url('19.jpeg')" target ="_blank">
+              <div class="box-label"></div>
+            </a>
+          </div>
+          <div class="link-boxes1">
+            <a href="https://en.wikipedia.org/wiki/COVID-19_vaccination_in_India" class="boxx3" style="background-image:url('17.jpeg')">
+              <div class="box-label"></div>
+            </a>
+              <a href="https://ourworldindata.org/covid-vaccinations" class="boxx4" style="background-image:url('18.jpeg')">
+              <div class="box-label"></div>
+            </a>
+          </div>
+    </div>
+</section>
+
+<!---Articles--->
+
+<section class="Article">
+<h2> HEALTHCARE ARTICLES</h2>
+  <br> <br>
+  <div class="link-boxes">
+    <a href="https://www.msn.com/en-us/news/other/omicron-covid-variant-poses-greater-risk-for-the-unvaccinated-former-white-house-advisor-says/ar-AARvmY3" class="box1" style="background-image:url('omicorn.jpg')">
+      <div class="box-label"></div>
+    </a>
+      <a href="https://www.rediff.com/news/report/active-covid-19-cases-in-india-lowest-in-552-days/20211206.htm" class="box2" style="background-image:url('indcov.jpg')">
+      <div class="box-label"></div>
+    </a>
+    <a href="https://medicalxpress.com/news/2021-11-patterns-response-health-advice-covid-.html" class="box3" style="background-image:url('fitn.jpg')">
+      <div class="box-label"></div>
+    </a>
+  </div>
+  <div class="link-boxes">
+    <a href="https://whnt.com/news/coronavirus/health-officials-give-advice-about-holiday-travel-and-the-omicron-variant/" class="box6" style="background-image:url('travel.jpeg')">
+      <div class="box-label"></div>
+    </a>
+      <a href="https://www.msn.com/en-gb/news/world/next-pandemic-could-be-more-lethal-than-covid-oxford-vaccine-creator-says/ar-AARvD1M?pfr=1" class="box5" style="background-image:url('precau.jpeg')">
+      <div class="box-label"></div>
+    </a>
+    <a href="https://www.ibtimes.com/covid-19-update-who-precautions-fully-vaccinated-need-take-3344751" class="box4" style="background-image:url('nextp.jpeg')">
+      <div class="box-label"></div>
+    </a>
+  </div>
+
+</section>
+
+<br> <br> <br> 
+<!--Appointment -->
+<section class="Appointments">
+    <h2> Book an Appointment with us! </h2>
+    <p> Health is one of the most important aspects of our life.Your health is at the center of your life. Every part of your life relies on you having good health.
+        Without good health, you have nothing! Regular medical check-ups help the doctors to diagnose a disease before it advances to greater proportions.
+    <p style="text-align:center;"><b>Click below to book an Appointment!</b></p>
+    <a href="appointment.html" class="hero-btn"><b>Book an Appointment</b></a>
+
+</section>
+<!--About us-->
+<section class="abus">
+    <h2> Our Staff and Facilities</h2>
+    <div class="row"> 
+        <div class="abus-col">
+            <h3> STAFF </h3>
+            <h4> Doctor - Sai Prashanth </h4>
+            <p> A highly experienced MBBS graduate from Hyderabad.</p>
+            <h4> Nurse - Haleema Shaik </h4>
+            <p> Clinic nurse with adequate knowledge and experience.</p>
+            <h4> Ambulance Driver - Qayum Shaikh </h4>
+            <p> An advanced life support ambulance is also provided.</p>
+        </div>
+        <div class="abus-col">
+            <h3> FACILITIES </h3><br>
+            <p> The medical facility is fully equipped with doctor chambers, patient emergency rooms with ICU beds, and a dispensary for OTC medicines. In case of an emergency, an ambulance is also available on campus. Medications are available for headache, common cold, fever, body pains, sprains, treatment of minor injuries such as mild cuts, scrapes, or burns. Antivenom injections and seizure treatments are also available.</p>
+        </div>
+        <div class="abus-col">
+            <h3> EMERGENCY NUMBERS </h3> <br>
+            <p> Incase of Emergency, please contact:<br>
+                T: +918455255555; +914044448888<br> 
+                or Email us at : <br>
+                W: www.woxsen.edu.in , info@woxsen.edu.in
+            </p>
+        </div>
+</section>
+
+<!--footer-->
+
+<section class="footer">
+    <h4>Corporate Office:   Gateway Jubilee, 2nd Floor, Road No. 36, Jubilee Hills, Hyderabad - 500 033, Telangana, India. T: +91 40 4444 8888<br>
+        Campus: Kamkole, Sadasivpet, Sangareddy District, Hyderabad - 502 345, Telangana, India. T: 08455 255555, info@woxsen.edu.in <br>
+        Woxsen University was established under the Ordinance issued by the Governor on the 20th May, 2020 to amend the Telangana State Private Universities<br>
+        (Establishment & Regulation) Act, 2018 vide R.N.I. No. TELMUL/2016/73158 and HSE No. 1051/2020-2022.</h4>
+    <p>Made and Maintained by Sabahat, Srikumar and Vaigarai <br>
+        Second year students of B.Tech at Woxsen University
+    </p>
+</section>
+
+
+<!----Javascript for toogle Menu-->
+        <script>
+            var navLinks= document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>
